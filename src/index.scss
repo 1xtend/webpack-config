@@ -1,5 +1,18 @@
+// Imports
 @import 'styles/reset';
 @import 'styles/fonts';
 @import 'styles/vars';
 @import 'styles/functions';
 @import 'styles/style';
+
+// Global styles
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: rem(1210);
+  margin: 0 auto;
+  padding: 0 rem(15);
+}
