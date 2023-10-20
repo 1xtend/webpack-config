@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+$font-size: 16px;
+
+// Cut unit
+@function cut($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+// Px to rem
+@function rem($px) {
+  @return math.div(cut($px), cut($font-size)) + rem;
+}
+
+// Px to em
+@function em($px, $fz) {
+  @return math.div(cut($px), cut($fz)) + em;
+}
+
+// Line-height
+@function lh($lh, $px) {
+  @return math.div(cut($lh), cut($px));
+}
